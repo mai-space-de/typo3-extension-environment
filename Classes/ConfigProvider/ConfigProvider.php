@@ -38,7 +38,7 @@ class ConfigProvider implements ConfigProviderInterface, ConfigProviderTraitInte
 
     public static function initialize(bool $applyDefaults = true): self
     {
-        self::$instance = new static();
+        self::$instance = new self();
         if ($applyDefaults) {
             self::$instance->applyDefaults();
         }
