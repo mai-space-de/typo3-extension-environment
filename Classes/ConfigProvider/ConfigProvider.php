@@ -13,7 +13,7 @@ use TYPO3\CMS\Core\Core\ApplicationContext;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Information\Typo3Version;
 
-final class ConfigProvider implements ConfigProviderInterface, ConfigProviderTraitInterface
+class ConfigProvider implements ConfigProviderInterface, ConfigProviderTraitInterface
 {
     use DefaultConfigProviderTrait;
     use DdevConfigProviderTrait;

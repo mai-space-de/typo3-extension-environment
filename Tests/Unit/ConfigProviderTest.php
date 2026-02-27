@@ -25,26 +25,28 @@ class ConfigProviderTest extends TestCase
     {
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] = 'Original Site Name';
 
-        // We can't easily test ConfigProvider::get() because it uses Environment::getContext() which is static and hard to mock.
-        // However, we can test the trait methods if we use a mock or a concrete class that uses the trait.
+        $reflection = new \ReflectionClass(ConfigProvider::class);
+        $configProvider = $reflection->newInstanceWithoutConstructor();
 
-        $configProvider = $this->getMockBuilder(ConfigProvider::class)
+        $context = $this->getMockBuilder(\TYPO3\CMS\Core\Core\ApplicationContext::class)
             ->disableOriginalConstructor()
-            ->onlyMethods([])
             ->getMock();
+        $context->method('isProduction')->willReturn(false);
+        $context->method('__toString')->willReturn('Development');
 
-        // Since we can't easily set the 'context' property because it's protected and set in constructor,
-        // this test might be tricky without a proper TYPO3 environment.
+        $contextProperty = $reflection->getProperty('context');
+        $contextProperty->setAccessible(true);
+        $contextProperty->setValue($configProvider, $context);
 
-        // For the sake of this task, I'll assume the environment is set up or I'll use reflection if needed.
-        // But better yet, I'll write tests for methods that don't depend on the constructor's environment calls.
+        $configProvider->appendContextToSiteName();
+
+        $this->assertEquals('[Development] Original Site Name', $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename']);
     }
 
     public function testUseImageMagick(): void
     {
-        $configProvider = $this->getMockBuilder(ConfigProvider::class)
-            ->disableOriginalConstructor()
-            ->getMock();
+        $reflection = new \ReflectionClass(ConfigProvider::class);
+        $configProvider = $reflection->newInstanceWithoutConstructor();
 
         $configProvider->useImageMagick('/custom/path/');
 
@@ -54,9 +56,8 @@ class ConfigProviderTest extends TestCase
 
     public function testUseMailpit(): void
     {
-        $configProvider = $this->getMockBuilder(ConfigProvider::class)
-            ->disableOriginalConstructor()
-            ->getMock();
+        $reflection = new \ReflectionClass(ConfigProvider::class);
+        $configProvider = $reflection->newInstanceWithoutConstructor();
 
         $configProvider->useMailpit('mailpit.host', 1025);
 

@@ -1,4 +1,9 @@
-# TYPO3 Extension: environment
+# maispace/environment — TYPO3 Environment Helpers
+
+[![CI](https://github.com/mai-space-de/typo3-extension-environment/actions/workflows/ci.yml/badge.svg)](https://github.com/mai-space-de/typo3-extension-environment/actions/workflows/ci.yml)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)](https://www.php.net/)
+[![TYPO3](https://img.shields.io/badge/TYPO3-13.0%2B-orange)](https://typo3.org/)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 This extension provides environment-dependent helper functions for setting up TYPO3. It allows you to easily manage different configurations for development, testing, and production environments, including support for DDEV.
 
