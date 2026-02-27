@@ -21,15 +21,10 @@ final class ConfigProvider implements ConfigProviderInterface, ConfigProviderTra
     use ProductionConfigProviderTrait;
 
     protected ApplicationContext $context;
-
     protected Typo3Version $version;
-
     protected string $configPath;
-
     protected string $varPath;
-
     private bool $ddevEnvironment = false;
-
     private static ?self $instance = null;
 
     protected function __construct()
