@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Maispace\Environment\Traits;
+namespace Maispace\MaiEnvironment\Traits;
 
 trait DdevConfigProviderTrait
 {

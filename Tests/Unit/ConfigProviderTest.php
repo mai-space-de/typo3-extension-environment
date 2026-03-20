@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Maispace\Environment\Tests\Unit;
+namespace Maispace\MaiEnvironment\Tests\Unit;
 
-use Maispace\Environment\ConfigProvider\ConfigProvider;
+use Maispace\MaiEnvironment\ConfigProvider\ConfigProvider;
 use PHPUnit\Framework\TestCase;
 
 class ConfigProviderTest extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Maispace\Environment\Traits;
+namespace Maispace\MaiEnvironment\Traits;
 
 use TYPO3\CMS\Core\Log\LogLevel;
 use TYPO3\CMS\Core\Log\Writer\FileWriter;

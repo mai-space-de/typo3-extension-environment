@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Maispace\Environment\ConfigProvider;
+namespace Maispace\MaiEnvironment\ConfigProvider;
 
 interface ConfigProviderInterface
 {

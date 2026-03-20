@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace Maispace\Environment\ConfigProvider;
+namespace Maispace\MaiEnvironment\ConfigProvider;
 
-use Maispace\Environment\Traits\ConfigProviderTraitInterface;
-use Maispace\Environment\Traits\DdevConfigProviderTrait;
-use Maispace\Environment\Traits\DefaultConfigProviderTrait;
-use Maispace\Environment\Traits\DevelopmentConfigProviderTrait;
-use Maispace\Environment\Traits\ProductionConfigProviderTrait;
+use Maispace\MaiEnvironment\Traits\ConfigProviderTraitInterface;
+use Maispace\MaiEnvironment\Traits\DdevConfigProviderTrait;
+use Maispace\MaiEnvironment\Traits\DefaultConfigProviderTrait;
+use Maispace\MaiEnvironment\Traits\DevelopmentConfigProviderTrait;
+use Maispace\MaiEnvironment\Traits\ProductionConfigProviderTrait;
 use TYPO3\CMS\Core\Core\ApplicationContext;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Information\Typo3Version;
