@@ -1,5 +1,14 @@
-/vendor/
-/.phpunit.cache/
-/.php-cs-fixer.cache
-/phpstan-baseline.neon
+.claude
 composer.lock
+vendor/
+public/
+.phpunit.cache
+.php-cs-fixer.cache
+phpstan-baseline.neon
+
+# IDE
+.idea
+*.swp
+
+# macOS
+.DS_Store
