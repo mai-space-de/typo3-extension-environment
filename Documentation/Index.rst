@@ -12,9 +12,6 @@ Maispace Environment
 :Package name:
     maispace/mai-environment
 
-:Version:
-    1.0.0
-
 :Language:
     en
 
