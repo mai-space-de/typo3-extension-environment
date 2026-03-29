@@ -5,7 +5,7 @@
 
 Helper extension for environment-dependent TYPO3 configuration. Loads `.env` files via `helhum/dotenv-connector` and provides utilities to detect the active environment (development, staging, production) and apply appropriate settings.
 
-**Requires:** TYPO3 13.4 LTS / 14.0 · PHP 8.2+
+**Requires:** TYPO3 13.4 LTS / 14.1 · PHP 8.2+
 
 ---
 
